@@ -1,0 +1,42 @@
+{
+  "name": "scraper",
+  "productName": "Scraper",
+  "version": "0.0.0",
+  "description": "A web scraper",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "kavun/scraper",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "kevinareed.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . $npm_package_productName --prune --asar --platform=darwin --arch=x64 --version=0.27.2 --out build && electron-packager . $npm_package_productName --prune --asar --platform=win32 --arch=x64 --version=0.27.2 --out build"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css",
+    "template.csv"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "dependencies": {
+    "csv-parse": "^0.1.3",
+    "csv-stringify": "0.0.8",
+    "electron-debug": "^0.1.0",
+    "jquery": "^2.1.4",
+    "ladda": "^0.9.8",
+    "stream-transform": "^0.1.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^4.1.2",
+    "electron-prebuilt": "^0.27.2"
+  }
+}

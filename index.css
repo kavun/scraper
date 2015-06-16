@@ -1,0 +1,27 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.hide {
+    display: none;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.center button {
+      width: 75%;
+      height: 100px;
+      font-size: 1.5em;
+}

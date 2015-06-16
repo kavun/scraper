@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Scraper</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="node_modules/ladda/dist/ladda.min.css">
+    </head>
+
+
+
+
+    <body>
+
+        <div class="container">
+            <header>
+                <h1>Scraper</h1>
+            </header>
+
+            <section class="main">
+                <div class="pure-g">
+                    <div class="pure-u-1-2 center">
+                        <button class="pure-button" id="downloadTemplate"><i class="fa fa-save"></i> Template</button>
+                    </div>
+                    <div class="pure-u-1-2 center">
+                        <button class="ladda-button"
+                            id="uploadTemplate"
+                            data-style="slide-left"
+                            data-color="green"
+                        >
+                            <span class="ladda-label">
+                                <i class="fa fa-search"></i> Choose File</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="info hide">
+                    <label>Total Pages: </label><span id="totalPages"></span>
+                    <label>Progress: </label><span id="progress"></span>
+                </div>
+            </section>
+        </div>
+
+
+
+
+        <div class="done hide">
+            <header>
+                <h1>Scraped!</h1>
+            </header>
+        </div>
+
+
+
+
+        <script src="app.js"></script>
+    </body>
+</html>
