@@ -2,7 +2,6 @@ var $ = require('jquery');
 var remote = require('remote');
 var fs = require('fs');
 var dialog = remote.require('dialog');
-var csv = require('csv');
 var transform = require('stream-transform');
 var parse = require('csv-parse');
 var stringify = require('csv-stringify');
@@ -20,7 +19,7 @@ $('#downloadTemplate').on('click', function (e) {
 
 		fs.writeFile(path,
 			"URL, Elements\n" +
-			"https://www.google.com, h1|.content\n" + 
+			"https://www.google.com, h1|.content\n" +
 			"http://www.bing.com, sw_sform|#hp_bottomCell",
 		function (err) {
 			if (err) {
@@ -40,7 +39,7 @@ $('#downloadTemplate').on('click', function (e) {
 $('#uploadTemplate').on('click', function (e) {
 
 
-	dialog.showOpenDialog({ 
+	dialog.showOpenDialog({
 		title : 'Choose .csv to scrape',
 		properties: ['openFile'],
 		filters: [
@@ -166,7 +165,7 @@ function scrape(path, fn) {
 				l.stop();
 
 				stringify(output, function(err, stuff){
-					
+
 					if (err) {
 						return fn(err, null);
 					}
